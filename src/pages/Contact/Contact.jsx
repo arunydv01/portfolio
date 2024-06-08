@@ -4,7 +4,6 @@ import { IoIosContact } from "react-icons/io";
 import "./contact.css";
 import {Animate} from 'react-simple-animate';
 
-
 const Contact = () => {
   return (
     <section id='contact' className='contact'>
@@ -24,7 +23,7 @@ const Contact = () => {
           transform: "translateX(0px)"
         }}
         >
-          <h3 className='header-text'>Send me an email</h3>
+          <h3 className='header-text'>Drop a message</h3>
         </Animate>
         <Animate
         play

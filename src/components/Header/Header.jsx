@@ -30,14 +30,6 @@ const Header = () => {
           toggleIcon ? <HiX size={30}/> : <FaBars size={30}/>
         }
         </div>
-        <div className='links'>
-          <a href="https://www.linkedin.com/in/arunydv01/">
-            <img src="/linkedin.png" alt="linkedin"/>
-          </a>
-          <a href="https://github.com/arunydv01">
-            <img src="/github.png" alt="github" />
-          </a>
-        </div>
       </div>
     </nav>
   )

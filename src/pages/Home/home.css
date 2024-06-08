@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    z-index: 0;
 }
 .home-text{
     display: flex;
@@ -16,19 +17,44 @@
 .home-text h1{
     color: var(--yellow-theme-main-color);
     margin: 0;
+    margin-top: -15px;
     font-weight: 500;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 75px;
     position: relative;
     overflow: hidden;
     white-space: nowrap;
     animation: typingEffectAnimation 2.5s steps(30, end);
 }
+.home-text h2{
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--yellow-theme-main-color);
+    animation: typingEffectAnimation 2.5s steps(30, end);
+}
+.home-img {
+    position: relative;
+    z-index: 1; /* Ensure image is above the canvas effects */
+    margin-bottom: 20px;
+  }
+
+.home-img img{
+    width: 250px;
+    margin-top: -140px;
+}
 
 @media only screen and (max-width: 550px){
     .home-text h1{
         font-size: 25px;
         line-height: 35px;
+    }
+    .home-img img{
+        width: 100px;
+        margin-top: -20px;
+    }
+    .home{
+        margin-top: 70px;
     }
 }
 
@@ -37,12 +63,26 @@
         font-size: 45px;
         line-height: 55px;
     }
+    .home-img img{
+        width: 150px;
+        margin-top: -40px;
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 990px){
     .home-text h1{
         font-size: 55px;
         line-height: 70px;
+    }
+    .home-img img{
+        width: 250px;
+        margin-top: -60px;
+    }
+}
+@media only screen and (min-width: 991px) and (max-width: 1290px){
+    .home-img img{
+        width: 250px;
+        margin-top: -90px;
     }
 }
 
@@ -58,8 +98,11 @@
 .connect{
     margin-top: 5px;
     display: flex;
-    flex-direction: column;
     padding-top: 20px;
+    gap: 20px;
+}
+.connect img{
+    width: 70px;
 }
 .connect button{
     padding: 5px 10px;
@@ -83,4 +126,6 @@
 .connect-btn{
     text-decoration: none;
 }
+
+
 

@@ -2,12 +2,13 @@
   background-color: var(--yellow-theme-nav-background-color);
   height: 80px;
   position: sticky;
+  z-index: 9999;
 }
 
 .header{
   display: flex;
   align-items: center;
-  justify-content: space-around
+  justify-content: space-around;
 }
 .portfolio{
   display: flex;
@@ -55,16 +56,6 @@
   text-decoration: none;
   padding: 0.5rem;
 }
-.links{
-  display: none;
-}
-.links a{
-  margin-right: 20px;
-}
-.links img{
-  width: 40px;
-  height: 40px;
-}
 .portfolio img{
   width: 80px;
   height: 80px;
@@ -73,6 +64,9 @@
 @media only screen and (max-width : 768px){
   .header {
     justify-content: space-between;
+  }
+  .lists{
+    z-index: 9999;
   }
   .list-ul{
     display: flex;
@@ -84,12 +78,14 @@
     left: -110%;
     opacity: 1;
     transition: all 0.5s ease;
+    z-index: 9999; 
     
   }
   .list-ul.active{
     background: #181818;
     left: 0px;
     opacity: 1;
+    z-index: 9999; 
   }
   .lists li{
     border-bottom: 1px solid #282828;
@@ -103,8 +99,4 @@
     padding-right: 20px;
   }
   
-}
-
-.links {
-  display: none; /* Hide social links in mobile view */
 }

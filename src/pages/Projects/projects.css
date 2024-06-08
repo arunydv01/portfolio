@@ -1,3 +1,6 @@
+.projects{
+  z-index: 0;
+}
 .projects-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -21,6 +24,7 @@
     position: relative;
     padding: 20px; /* Increased padding to 30px */
     box-sizing: border-box;
+    z-index: -1;
   }
   
   .projects-cards-item-img a {

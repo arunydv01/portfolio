@@ -4,3 +4,8 @@
 .app-content{
     height: calc(100% - 80px);
 }
+
+#particles canvas{
+    z-index: -1;
+    position: absolute;
+}
