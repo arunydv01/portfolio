@@ -1,0 +1,122 @@
+.projects-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .projects-cards-item {
+    height: 366px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .projects-cards-item:hover .overlay {
+    opacity: 1;
+  }
+  
+  .projects-cards-item-img {
+    height: 100%;
+    position: relative;
+    padding: 20px; /* Increased padding to 30px */
+    box-sizing: border-box;
+  }
+  
+  .projects-cards-item-img a {
+    height: 100%;
+    display: block;
+  }
+  
+  .projects-cards-item-img a img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 25px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: 20px; /* Match the padding of the container */
+    right: 0;
+    height: calc(100% - 40px); /* Adjust height to account for padding */
+    width: calc(100% - 40px); /* Adjust width to account for padding */
+    opacity: 0;
+    border-radius: 25px;
+    transition: opacity 0.5s ease;
+    background-color: var(--yellow-theme-main-color);
+  }
+  
+  .overlay div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .overlay div p {
+    color: black;
+    margin: 0px;
+    font-size: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingEffect 1s steps(30, end);
+  }
+  
+  .overlay div button{
+    cursor: pointer;
+    margin-top: 16px;
+    padding: 10px 70px;
+    font-size: 2rem;
+    background: transparent;
+    color: black;
+    border: 1.5px solid black;
+    border-radius: 4px;
+    
+  }
+  .overlay div button a{
+    text-decoration: none;
+    background: transparent;
+    color: black;
+    font-weight: 500;
+  }
+  
+  @keyframes typingEffect {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+
+@media only screen and (max-width: 480px){
+    .projects-cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .overlay div p{
+        font-size: 30px;
+    }
+    .overlay div button{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px){
+    .projects-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .overlay div p{
+        font-size: 25px;
+    }
+    .overlay div button{
+        font-size: 25px;
+    }
+}
+

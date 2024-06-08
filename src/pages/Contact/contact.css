@@ -1,0 +1,106 @@
+.contact-content{
+    padding: 20px;
+
+}
+.header-text{
+    color: var(--yellow-theme-sub-text-color);
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1em;
+    letter-spacing: 0.5px;
+    position: relative;
+    /* text-transform: uppercase; */
+    padding: 5px 10px;
+    border-bottom: 2px solid var(--yellow-theme-main-color);
+}
+
+.header-text::before,.header-text::after{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 5px;
+    background-color: var(--yellow-theme-main-color);
+    bottom: -1px;
+}
+.header-text::before{
+    left: 0;
+}
+.header-text::after{
+    right: 0;
+}
+.form{
+    margin-top: 30px;
+}
+.control-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 30px;
+}
+.control-wrapper div{
+    position: relative;
+
+}
+.input-name,.input-email,.input-desc{
+    width: 100%;
+    border: 2px solid var(--yellow-theme-main-color);
+    padding: 16px 12px;
+    transition: all 0.5s ease;
+    position: relative;
+    background-color: transparent;
+    color: var(--yellow-theme-sub-text-color);
+}
+.name-label,.email-label,.desc-label{
+    font-weight: 500;
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    transition: all 0.2s ease;
+    color: var(--yellow-theme-sub-text-color);
+    font-size: 16px;
+}
+.name-label:focus,.email-label:focus,.desc-label:focus{
+    outline: none;
+}
+.input-name:focus + .name-label, .input-name:valid + .name-label{
+    font-size: 18px;
+    top: -25px;
+    left: 0px;
+}
+.input-email:focus + .email-label, .input-email:valid + .email-label{
+    font-size: 18px;
+    top: -25px;
+    left: 0px;
+}
+.input-desc:focus + .desc-label, .input-desc:valid + .desc-label{
+    font-size: 18px;
+    top: -25px;
+    left: 0px;
+}
+.form button{
+    cursor: pointer;
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    background: transparent;
+    color: var(--yellow-theme-main-color);
+    border: 1.5px solid var(--yellow-theme-main-color);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.form button:hover{
+    color: black;
+    background: var(--yellow-theme-main-color);
+}
+
+@media only screen and (max-width: 768px){
+    .form{
+        text-align: center;
+    }
+    .control-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+}
+
